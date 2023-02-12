@@ -1,8 +1,19 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  content: ['./dist/**/*.html', './src/**/*.{js,jsx,ts,tsx}', './*.html'],
-  variants: {
+  content: ['./**/*.{html,tsx}'],
+  theme: {
     extend: {
-      opacity: ['disabled']
-    }
-  }
+      zIndex: {},
+      colors: {
+        primary: colors.blue,
+        secondary: colors.teal,
+        neutral: colors.gray,
+        success: colors.green,
+        warning: colors.orange,
+        danger: colors.red,
+      },
+    },
+  },
 }
